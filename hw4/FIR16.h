@@ -7,7 +7,7 @@ SC_MODULE(FIR16) {
 	sc_out<sc_uint<32> > y;
 
     sc_uint<32> acc;
-    sc_uint<32> input;
+    sc_signal<sc_uint<32> > output_buffer;
 
     sc_signal<sc_uint<32> > z[16];
     sc_uint<32> bi;

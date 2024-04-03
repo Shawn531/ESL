@@ -36,7 +36,7 @@ int sc_main(int argc, char* argv[]) {
 	rst.write(1);
 	sc_start(2.5, SC_NS);
 
-	for(int i = 0;i < (64 + 17);i++)
+	for(int i = 0;i < (64 + 18);i++)
 	{
 		int data;
 		if(i < 64)

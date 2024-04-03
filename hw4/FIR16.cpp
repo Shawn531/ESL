@@ -3,6 +3,7 @@
 void FIR16::fir16() {
     bi = 0x00000F0F;
     acc = 0;
+    output_buffer = 0;
     for (int i = 0; i < 16; i++) {
         z[i] = 0;
     }
@@ -16,6 +17,7 @@ void FIR16::fir16() {
             acc += z[i].read() * bi;
         }
 
-        y.write(acc);
+        output_buffer.write(acc);
+        y.write(output_buffer.read());
     }
 }
